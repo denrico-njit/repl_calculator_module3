@@ -1,5 +1,5 @@
 import pytest
-from app.operations import addition, subtraction, multiplication, division
+from app.operations import Operations
 
 
 class TestAddition:
@@ -16,7 +16,7 @@ class TestAddition:
         (100, 200, 300),
     ])
     def test_addition_parametrized(self, a, b, expected):
-        assert addition(a, b) == expected
+        assert Operations.addition(a, b) == expected
 
 
 class TestSubtraction:
@@ -33,7 +33,7 @@ class TestSubtraction:
         (0, 0, 0),
     ])
     def test_subtraction_parametrized(self, a, b, expected):
-        assert subtraction(a, b) == expected
+        assert Operations.subtraction(a, b) == expected
 
 
 class TestMultiplication:
@@ -50,7 +50,7 @@ class TestMultiplication:
         (-1, -1, 1),
     ])
     def test_multiplication_parametrized(self, a, b, expected):
-        assert multiplication(a, b) == expected
+        assert Operations.multiplication(a, b) == expected
 
 
 class TestDivision:
@@ -66,15 +66,15 @@ class TestDivision:
         (7, 2, 3.5),
     ])
     def test_division_parametrized(self, a, b, expected):
-        assert division(a, b) == expected
+        assert Operations.division(a, b) == expected
     
     # Edge cases
     def test_division_by_zero(self):
         """Test that division by zero raises ValueError"""
         with pytest.raises(ValueError, match="Division by zero is undefined"):
-            division(5, 0)
+            Operations.division(5, 0)
     
     def test_division_by_zero_with_zero_numerator(self):
         """Test that 0/0 also raises ValueError"""
         with pytest.raises(ValueError, match="Division by zero is undefined"):
-            division(0, 0)
+            Operations.division(0, 0)
