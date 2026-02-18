@@ -1,4 +1,4 @@
-from app.operations import Operations
+from app.operation import Operation
 
 def calculator():
     """Basic REPL Calculator -- Not particularly useful, but instructive!"""
@@ -31,14 +31,14 @@ def calculator():
 
 
         if operation == 'add':
-            result = Operations.addition(n1, n2)
+            result = Operation.addition(n1, n2)
         elif operation == 'subtract':
-            result = Operations.subtraction(n1, n2)
+            result = Operation.subtraction(n1, n2)
         elif operation == 'multiply':
-            result = Operations.multiplication(n1, n2)
+            result = Operation.multiplication(n1, n2)
         elif operation == 'divide':
             try:
-                result = Operations.division(n1, n2)
+                result = Operation.division(n1, n2)
             except ValueError as e:
                 # Handle division by zero errors
                 print(e)

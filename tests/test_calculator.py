@@ -70,3 +70,4 @@ def test_calculator_multiple_operations(monkeypatch, capsys):
     assert 'Result: 5.0' in output
     assert 'Result: 20.0' in output
     assert 'Result: 7.0' in output
+    assert 'Quitting' in output
