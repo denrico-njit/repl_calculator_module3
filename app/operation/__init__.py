@@ -54,3 +54,10 @@ class Operation:
             raise ValueError("Division by zero is undefined.\n")  
         return a / b  # If 'b' is not zero, we divide the first number (a) by the second number (b) and return the result.
 
+    @staticmethod
+    def power(a: float, b: float) -> float:
+        """
+        This static method takes two numbers (a and b) and returns a to the b power.
+        Example: if we call Operation.power(2.0, 3.0), it will return 8.0.
+        """
+        return a ** b  

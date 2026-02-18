@@ -48,7 +48,7 @@ def test_calculator_division(monkeypatch, capsys):
 def test_calculator_division_by_zero(monkeypatch, capsys):
     """Test calculator handles division by zero gracefully"""
     output = run_calculator_with_input(monkeypatch, capsys, ['divide 5 0', 'quit'])
-    assert 'Division by zero is undefined' in output
+    assert 'Cannot divide by zero' in output
 
 
 def test_calculator_invalid_operation(monkeypatch, capsys):
