@@ -98,7 +98,7 @@ def calculator():
             except ValueError as e:
                 # catch nonexistent operations
                 print(e)
-                print("Type 'help' to see the list of valid operations")
+                print("Invalid input. Type 'help' to see the list of valid operations")
                 continue
 
             # Attempt to run the calculation

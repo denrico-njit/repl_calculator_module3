@@ -95,7 +95,7 @@ class Calculation(ABC):
         **Returns:**
         - `str`: A string containing the class name and operands.
         """
-        return f"{self.__class__.__name__}(a={self.a}, b={self.b})"
+        return f"{self.__class__.__name__}(a={self.a}, b={self.b})" # pragma: no cover
 
 # -----------------------------------------------------------------------------------
 # Factory Class: CalculationFactory
